@@ -1,0 +1,42 @@
+<h1>Accounts list</h1>
+
+<p>
+  {{link-to "New Account" "user.accounts.new" }}
+</p>
+
+{{#if model.length}}
+  <table>
+    <thead>
+      <tr>
+        <th>
+          Name
+        </th>
+        <th colspan="3">
+          Actions
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each model as |account|}}
+        <tr>
+          <td>
+            {{account.name}}
+          </td>
+          <td>
+            {{link-to "Edit" "user.accounts.edit" account}}
+          </td>
+          <td>
+            {{link-to "Show" "user.accounts.show" account}}
+          </td>
+          <td>
+            <a href="#" {{action "remove" account}}>Remove</a>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  <p id="blankslate">
+    No Accounts found
+  </p>
+{{/if}}

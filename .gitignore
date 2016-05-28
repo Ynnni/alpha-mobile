@@ -19,3 +19,6 @@ testem.log
 # cordova
 /ember-cordova/cordova/platforms
 /ember-cordova/cordova/plugins
+
+# environment variables
+/.env
