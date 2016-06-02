@@ -1,3 +1,22 @@
-<h2 id="title">Welcome to Ember</h2>
-
-{{outlet}}
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout-title">Alpha</span>
+      <div class="mdl-layout-spacer"></div>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link">User</a>
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Alpha</span>
+    <nav class="mdl-navigation">
+      {{ link-to "Accounts" "user.accounts" class="mdl-navigation__link" }}
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content">
+      {{outlet}}
+    </div>
+  </main>
+</div>
